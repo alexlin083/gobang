@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>memberJoin</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- normalize CSS -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="./css/memberJoin.css">
+
+</head>
+
+<body>
+
+    <div class="navHead">
+
+    </div>
+
+    <div class="container">
+        <aside class="memberAside">
+            <div class="headerTitle">
+                <h1 class="bigTitle">加入會員</h1>
+            </div>
+            <div class="memberPage">
+                <div class="memberContent">
+                    <div class="loginItem">
+                        <ul class="itemUl">
+                            <li class="active joinMember"><a href="">加入會員</a></li>
+                            <li class="loginMember"><a href="">會員登入</a></li>
+                        </ul>
+                        <form action="">
+                            <div class="memberEnter">
+                                <div class="item">
+                                    <label class="itemLabel" for="">會員帳號</label>
+                                    <div class="itemContent">
+                                        <input class="itemInput" type=" ">
+                                        <div class="check checkAccount">該帳號已創建</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <label class="itemLabel" for="">信箱</label>
+                                    <div class="itemContent">
+                                        <input class="itemInput" type=" ">
+                                        <div class="check checkAccount">該信箱已創建</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <label class="itemLabel" for="">密碼</label>
+                                    <div class="itemContent">
+                                        <input class="itemInput" type=" ">
+                                        <div class="check checkAccount">該密碼不符合長度限制</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <label class="itemLabel" for="">確認密碼</label>
+                                    <div class="itemContent">
+                                        <input class="itemInput" type=" ">
+                                        <div class="check checkAccount">與密碼不相符</div>
+                                    </div>
+                                </div>
+                                <button class="btn">下一步</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="animation">
+                    <!-- <img class="turtle" src="./images/turttle.png" alt=""> -->
+                    <div class="bubbles" num="50" duration="5">
+                        <!-- <div class="bubble bubble1"></div>
+                        <div class="bubble bubble2"></div> -->
+                        <!-- <div class="bubble" style="transform: translate(100px,0) scale(2)"></div>
+                        <div class="bubble" style="transform: translate(100px,0) scale(3)"></div> -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- <div class="footer">
+
+    </div> -->
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        (function (w, d) {
+            let bubbles = d.querySelector('.bubbles');
+            let bubblesWidth = bubbles.clientWidth;
+            let num = bubbles.getAttribute('num');
+            let duration = bubbles.getAttribute('duration')
+
+            bubbleUp();
+            setInterval(bubbleUp, duration * 1000);
+
+            function bubbleUp() {
+                bubbles.innerHTML = '';
+                for (let i = 0; i < num; i++) {
+                    let bubbleDiv = d.createElement('div');
+                    bubbleDiv.classList.add('bubble');
+                    bubbleDiv.style.cssText = `
+                        transform: translate(${bubblesWidth * Math.random()}px, 0) scale(${5 * Math.random()});
+                        animation: up ${duration * Math.random() + 1}s ease-in-out;
+                    `
+                    bubbles.appendChild(bubbleDiv);
+                }
+            }
+        })(window, document)
+
+
+    </script>
+</body>
+
+</html>
